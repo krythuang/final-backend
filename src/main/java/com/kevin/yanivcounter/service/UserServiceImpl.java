@@ -22,4 +22,15 @@ public class UserServiceImpl implements UserService{
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+    @Override
+    public User getUserById(int userId) {
+        return userRepository.findById(userId).orElse(null);
+    }
+
+    @Override
+    public void deleteUser(int userId) {
+        userRepository.deleteById(userId);
+    }
+
 }

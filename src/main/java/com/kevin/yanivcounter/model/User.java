@@ -12,7 +12,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String address;
+    private String email;
+    private int score;
+    private int toAdd;
+
+
+
 
     public User() {
     }
@@ -33,11 +38,26 @@ public class User {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public int getScore() {
+        return score;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public int getToAdd() {
+        return toAdd;
+    }
+
+    public void setToAdd(int toAdd) {
+        this.toAdd = toAdd;
     }
 }
